@@ -3,90 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sanyam Aware's Personal Portfolio">
-    <title>Sanyam Aware - Portfolio</title>
+    <meta name="description" content="Sanyam Aware's Professional Portfolio">
+    <title>Sanyam Aware - Innovator & Creator</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            overflow-x: hidden;
+        }
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: rgba(13, 17, 23, 0.9);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            border-bottom: 1px solid #30363d;
+        }
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #58a6ff;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #c9d1d9;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #58a6ff;
+        }
+        #hero {
+            height: 100vh;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            color: #fff;
+        }
+        #hero h1 {
+            font-size: 4.5em;
+            animation: fadeInDown 1s ease;
+        }
+        #hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            animation: fadeInUp 1.5s ease;
+        }
+        #hero .btn {
+            margin-top: 30px;
+            padding: 15px 40px;
+            font-size: 1.3em;
+            color: #fff;
+            background: #58a6ff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: fadeInUp 2s ease;
+            transition: background 0.3s;
+        }
+        #hero .btn:hover {
+            background: #1f6feb;
+        }
+        #about, #projects, #experience, #skills, #contact {
+            padding: 100px 50px;
+            text-align: center;
+        }
+        #about h2, #projects h2, #experience h2, #skills h2, #contact h2 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        #skills .skill-bar {
+            margin: 20px auto;
+            background: #30363d;
+            border-radius: 25px;
+            overflow: hidden;
+            width: 70%;
+        }
+        #skills .skill-bar div {
+            height: 30px;
+            line-height: 30px;
+            background: #58a6ff;
+            text-align: right;
+            padding-right: 10px;
+            color: #fff;
+        }
+        #contact form {
+            max-width: 600px;
+            margin: auto;
+        }
+        #contact form input, #contact form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background: #21262d;
+            color: #c9d1d9;
+            font-size: 1em;
+        }
+        footer {
+            background: #161b22;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #30363d;
+        }
+        footer p {
+            margin: 0;
+            color: #8b949e;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Sanyam Aware</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="logo">Sanyam Aware</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </header>
 
     <section id="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Sanyam Aware</h1>
-            <p>Master of IT | Aspiring Software Engineer | Problem Solver</p>
-            <a href="#projects" class="btn">Explore My Work</a>
+        <div>
+            <h1>Welcome to My World</h1>
+            <p>Innovating, Building, Transforming</p>
+            <button class="btn">Explore My Work</button>
         </div>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>
-            I am pursuing a Master of Information Technology at Queensland University of Technology with a GPA of 6.00/7.00. My academic journey, combined with hands-on experience in IT, has equipped me with strong technical skills and leadership abilities.
-        </p>
-        <p>
-            From contributing to the development of IT infrastructures to building user-friendly websites, I am passionate about solving real-world challenges through technology. My goal is to continuously grow and make a meaningful impact in the tech industry.
-        </p>
+        <p>I am an IT professional with a passion for solving complex problems and building innovative solutions. My journey in technology is driven by a strong foundation in computer science, hands-on experience in diverse projects, and a keen eye for design and usability.</p>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>Indian Railway Tweet Monitoring System</h3>
-            <p>
-                Spearheaded a project to classify tweets into emergencies, complaints, or feedback for Indian Railways. Used Python, Apache Kafka, AWS EC2, and Amazon RDS for data processing and real-time monitoring.
-            </p>
+        <div>
+            <h3>Indian Railway Monitoring System</h3>
+            <p>An AI-powered platform to classify and prioritize user feedback for Indian Railways, enhancing operational efficiency.</p>
         </div>
-        <div class="project">
+        <div>
             <h3>Orderzy</h3>
-            <p>
-                Developed an e-commerce application using PyCharm and MySQL. Integrated secure OTP-based login and multiple payment options, enhancing user experience.
-            </p>
+            <p>A robust e-commerce platform with secure authentication and multiple payment options, streamlining online shopping experiences.</p>
         </div>
     </section>
 
     <section id="experience">
         <h2>Experience</h2>
-        <div class="experience">
+        <div>
             <h3>IT Support Intern</h3>
-            <p>
-                <strong>National Banking Corporation, Port Moresby</strong> <br>
-                Designed Python-based automation for personalized pay slips and supported IT infrastructure development during a critical transition phase.
-            </p>
+            <p>National Banking Corporation, Port Moresby</p>
+            <p>Designed Python-based automation for personalized pay slips and supported IT infrastructure during a major transition phase.</p>
         </div>
-        <div class="experience">
+        <div>
             <h3>Web Developer Intern</h3>
-            <p>
-                <strong>Stalks and Stems, Brisbane</strong> <br>
-                Enhanced website functionality, improving order rates by 7%, using HTML, CSS, JavaScript, PHP, and SQL.
-            </p>
+            <p>Stalks and Stems, Brisbane</p>
+            <p>Enhanced website functionality, boosting order rates by 7%, using modern web technologies like HTML, CSS, and JavaScript.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-bar">
+            <div style="width: 90%;">Python (90%)</div>
+        </div>
+        <div class="skill-bar">
+            <div style="width: 80%;">HTML/CSS/JavaScript (80%)</div>
+        </div>
+        <div class="skill-bar">
+            <div style="width: 85%;">Database Management (85%)</div>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Feel free to connect with me through the following platforms:</p>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/sanyam-aware-44494278" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/sanyamaware" target="_blank">GitHub</a></li>
-            <li><a href="mailto:awaresanyam@gmail.com">Email</a></li>
-        </ul>
-        <a href="SanyamAware_Masters-IT_Resume.pdf" download class="btn">Download Resume</a>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button class="btn" type="submit">Send Message</button>
+        </form>
     </section>
 
     <footer>
-        <p>&copy; 2025 Sanyam Aware. All Rights Reserved.</p>
+        <p>© 2025 Sanyam Aware. Designed with passion and purpose.</p>
     </footer>
 </body>
 </html>
