@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sanyam Aware's Professional Portfolio">
     <title>Sanyam Aware - Innovator & Creator</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -37,6 +37,7 @@
         .nav-links {
             list-style: none;
             display: flex;
+            margin-right: 95px;
             gap: 30px;
         }
         .nav-links a {
@@ -57,6 +58,20 @@
             text-align: center;
             position: relative;
             color: #fff;
+            overflow: hidden;
+        }
+        #hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        #hero .hero-content {
+            position: relative;
+            z-index: 2;
         }
         #hero h1 {
             font-size: 4.5em;
@@ -85,11 +100,37 @@
         #about, #projects, #experience, #skills, #contact {
             padding: 100px 50px;
             text-align: center;
+            position: relative;
         }
         #about h2, #projects h2, #experience h2, #skills h2, #contact h2 {
             font-size: 3em;
             margin-bottom: 30px;
             text-transform: uppercase;
+            animation: slideIn 1.5s ease;
+        }
+        #about img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        #projects .project-card {
+            display: flex;
+            justify-content: space-between;
+            background: #21262d;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        #projects .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        #projects .project-card img {
+            width: 150px;
+            height: 100px;
+            border-radius: 10px;
         }
         #skills .skill-bar {
             margin: 20px auto;
@@ -139,6 +180,10 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-100%); }
+            to { opacity: 1; transform: translateX(0); }
+        }
     </style>
 </head>
 <body>
@@ -154,7 +199,7 @@
     </header>
 
     <section id="hero">
-        <div>
+        <div class="hero-content">
             <h1>Welcome to My World</h1>
             <p>Innovating, Building, Transforming</p>
             <button class="btn">Explore My Work</button>
@@ -163,32 +208,25 @@
 
     <section id="about">
         <h2>About Me</h2>
+        <img src="profile-placeholder.jpg" alt="Your Headshot">
         <p>I am an IT professional with a passion for solving complex problems and building innovative solutions. My journey in technology is driven by a strong foundation in computer science, hands-on experience in diverse projects, and a keen eye for design and usability.</p>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-        <div>
-            <h3>Indian Railway Monitoring System</h3>
-            <p>An AI-powered platform to classify and prioritize user feedback for Indian Railways, enhancing operational efficiency.</p>
+        <div class="project-card">
+            <img src="project-placeholder.jpg" alt="Project Screenshot">
+            <div>
+                <h3>Indian Railway Monitoring System</h3>
+                <p>An AI-powered platform to classify and prioritize user feedback for Indian Railways, enhancing operational efficiency.</p>
+            </div>
         </div>
-        <div>
-            <h3>Orderzy</h3>
-            <p>A robust e-commerce platform with secure authentication and multiple payment options, streamlining online shopping experiences.</p>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <div>
-            <h3>IT Support Intern</h3>
-            <p>National Banking Corporation, Port Moresby</p>
-            <p>Designed Python-based automation for personalized pay slips and supported IT infrastructure during a major transition phase.</p>
-        </div>
-        <div>
-            <h3>Web Developer Intern</h3>
-            <p>Stalks and Stems, Brisbane</p>
-            <p>Enhanced website functionality, boosting order rates by 7%, using modern web technologies like HTML, CSS, and JavaScript.</p>
+        <div class="project-card">
+            <img src="project-placeholder.jpg" alt="Project Screenshot">
+            <div>
+                <h3>Orderzy</h3>
+                <p>A robust e-commerce platform with secure authentication and multiple payment options, streamlining online shopping experiences.</p>
+            </div>
         </div>
     </section>
 
