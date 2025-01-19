@@ -14,14 +14,18 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
+// Initialize Particles.js
+particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('Particles.js loaded');
+});
+
 // Typing Effect
 const typewriterText = "Welcome to My World";
 let i = 0;
 const typeSpeed = 100;
 
-const typewriter = document.querySelector(".typewriter");
-
 function typeEffect() {
+    const typewriter = document.querySelector(".typewriter");
     if (i < typewriterText.length) {
         typewriter.innerHTML += typewriterText.charAt(i);
         i++;
@@ -30,6 +34,13 @@ function typeEffect() {
 }
 
 typeEffect();
+
+// Parallax Effect
+window.addEventListener('scroll', () => {
+    const hero = document.querySelector('#hero');
+    const scrollY = window.scrollY * 0.5;
+    hero.style.backgroundPosition = `center ${scrollY}px`;
+});
 
 // Smooth Scrolling
 document.querySelectorAll(".nav-links a").forEach(anchor => {
